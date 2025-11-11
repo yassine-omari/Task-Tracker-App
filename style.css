@@ -1,8 +1,9 @@
+/* General App Styling */
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #e0f7fa; 
+    background: #e0f7fa;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -15,7 +16,7 @@ body {
     background: #ffffff;
     width: 420px;
     max-width: 90%;
-    min-height: 700px;
+    min-height: 600px;
     padding: 35px 30px;
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0,0,0,0.1);
@@ -29,10 +30,11 @@ body {
 
 h1 {
     margin-bottom: 25px;
-    font-size: 30px;
-    color: #00796b; 
+    font-size: 28px;
+    color: #00796b;
 }
 
+/* Input Section */
 .input-section {
     display: flex;
     gap: 12px;
@@ -71,17 +73,19 @@ h1 {
     transform: scale(1.05);
 }
 
+/* Task List */
 .tasks-container {
     display: flex;
     flex-direction: column;
     gap: 14px;
 }
 
+/* Individual Task */
 .task-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #e0f2f1; 
+    background: #e0f2f1;
     padding: 14px 18px;
     border-radius: 14px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
@@ -101,17 +105,19 @@ h1 {
     word-break: break-word;
 }
 
+/* Checkbox Styling */
 .checkbtn {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: #00796b; 
+    accent-color: #00796b;
 }
 
+/* Delete Button Styling */
 .deletebtn {
     background: transparent;
     border: none;
-    color: #e53935; 
+    color: #e53935;
     font-size: 20px;
     cursor: pointer;
     transition: color 0.3s, transform 0.2s;
@@ -122,7 +128,67 @@ h1 {
     transform: scale(1.2);
 }
 
+/* Completed Task Styling */
 .task-item.completed {
     text-decoration: line-through;
-    opacity: 0.4;
+    opacity: 0.6;
+}
+
+/* ------------------ Responsive Styles ------------------ */
+@media (max-width: 480px) {
+    .app-container {
+        width: 95%;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .inputtask {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+
+    .addbtn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .task-item {
+        padding: 10px 12px;
+    }
+
+    .task-text {
+        font-size: 14px;
+        margin-left: 8px;
+    }
+
+    .checkbtn {
+        width: 18px;
+        height: 18px;
+    }
+
+    .deletebtn {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .app-container {
+        width: 80%;
+        padding: 30px 25px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .inputtask, .addbtn {
+        font-size: 15px;
+    }
+
+    .task-text {
+        font-size: 15px;
+    }
 }
