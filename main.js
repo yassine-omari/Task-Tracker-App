@@ -9,6 +9,7 @@ addbtn.addEventListener('click', () => {
     if (tasktext !== "") {
         tasks.push({ description: tasktext, completed: false });
         inputtask.value = "";
+        tasks.sort((a,b) =>Number(a.completed)-Number(b.completed))
         RenderTask();
     }
 })
